@@ -1,0 +1,11 @@
+/* App.css - Only global styles if absolutely necessary */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #121212;
+  /* Dark background */
+}
+
+/* No other styles - they belong in GameComponent.css */
