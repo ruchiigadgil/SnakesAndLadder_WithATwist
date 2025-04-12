@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Indian Constitution-Themed Snakes & Ladders Game 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fun and educational React-based twist on the classic Snakes and Ladders board game — where each snake or ladder triggers a quiz about the Indian Constitution! Learn while you play and race your opponent (the computer) to the 100th block!
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+##  Tech Stack
 
-### `npm start`
+- Frontend: React.js (Hardcoded backend)
+- Styling:Vanilla CSS modules (per component)
+- Data Handling: Hardcoded MCQs and game logic in plain JS
+- Assets: Custom board image and token icons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Folder Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+src/
+├── assets/               # Board and token images
+│   ├── board.png
+│   ├── token-user.png
+│   └── token-computer.png
+│
+├── components/           # UI and game logic components
+│   ├── Board.jsx
+│   ├── Dice.jsx
+│   ├── GameComponent.jsx
+│   ├── PlayerToken.jsx
+│   └── QuestionModal.jsx
+│
+│
+├── styles/               # CSS files per component
+│   ├── App.css
+│   ├── Board.css
+│   ├── Dice.css
+│   ├── GameComponent.css
+│   ├── Player.css
+│   ├── PlayerToken.css
+│   └── QuestionModal.css
+│
+├── utils/                # Game logic utilities
+│   ├── jumps.js          # Snake & ladder positions
+│   └── positionMap.js    # Cell coordinates on the board image
+│
+├── App.js
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+##  How the Game Works
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The user and computer take turns rolling the dice.
+- Landing at the base of a ladder or mouth of a snake triggers a quiz.
+- Answer correctly to climb the ladder or avoid the snake.
+- Wrong answer? Miss the ladder or slide down the snake!
+- First player to reach block 100 wins
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Ladder Positions
+export const ladders = {
+  5: 58,
+  14: 49,
+  42: 60,
+  53: 72,
+  64: 83,
+  75: 94,
+};
 
-### `npm run eject`
+## Snake Positions
+export const snakes = {
+  38: 20,
+  45: 7,
+  51: 10,
+  76: 54,
+  91: 73,
+  97: 61,
+};
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Highlights
+Learn about the Indian Constitution in an interactive way
+Clean UI with custom tokens and board
+Turn-based logic between player and computer
+Multiple-choice questions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Running the Project Locally
+npm install
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
